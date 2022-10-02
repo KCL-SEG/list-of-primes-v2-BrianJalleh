@@ -1,25 +1,27 @@
 """List of prime numbers generator."""
 """ENTER YOUR SOLUTION HERE!"""
 
+def isPrime(number):
+    for i in range(2, number):
+        if(number%i == 0):
+            return False
+        
+        return True
+
+
 def primes(number_of_primes):
     if(number_of_primes <= 0):
         raise ValueError
     
     list = []
     
-    count = 2
+    currentNumber = 2
     
     while len(list) < number_of_primes:
-        isPrime = True
-        
-        for i in range(2, count):
-            if(count%i == 0):
-                isPrime = False
-                break
             
-        if(isPrime):
-            list.append(count)
+        if(isPrime(currentNumber)):
+            list.append(currentNumber)
             
-        count += 1
+        currentNumber += 1
         
     return list
