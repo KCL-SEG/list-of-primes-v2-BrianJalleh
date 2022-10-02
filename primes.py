@@ -6,12 +6,12 @@ def isPrime(number):
         if(number%i == 0):
             return False
         
-        return True
+    return True
 
 
 def primes(number_of_primes):
     if(number_of_primes <= 0):
-        raise ValueError
+        raise ValueError("No numbers <= 0")
     
     list = []
     
@@ -25,3 +25,6 @@ def primes(number_of_primes):
         currentNumber += 1
         
     return list
+
+
+print(primes(2))
