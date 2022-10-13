@@ -2,7 +2,11 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 def isPrime(number):
-    for i in range(2, number):
+    if ((number/2)%2 == 0): return False   
+    
+    half = number//2
+    
+    for i in range(2, half):
         if(number%i == 0):
             return False
         
